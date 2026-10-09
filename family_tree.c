@@ -27,13 +27,13 @@ Person* create_person(const char *name, int age)
 
 int main(void)
 {
-    char ame[100];
-    int ag;
+    char name[100];
+    int age;
     printf("Enter name: ");
-    scanf("%99s", ame);
+    scanf("%99s", name);
     printf("Enter age: ");
-    scanf("%d", &ag);
-    Person* ptr=create_person(ame, ag);
+    scanf("%d", &age);
+    Person* ptr=create_person(name, age);
     printf("Name: %s\nAge: %d\n", ptr->name, ptr->age);
     return 0;
 }
