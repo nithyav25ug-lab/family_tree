@@ -6,3 +6,6 @@ Milestone 2:
 
 Milestone 3:
 <img width="394" height="554" alt="Milestone 3" src="https://github.com/user-attachments/assets/80247d8b-49a6-4fa2-829c-025046ffc8e1" />
+
+Bonus Task: 
+<img width="385" height="679" alt="Bonus Task" src="https://github.com/user-attachments/assets/b642daa1-8676-42b6-b4d2-2fa58d92d633" />
