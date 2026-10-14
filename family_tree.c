@@ -118,6 +118,14 @@ void point_tree_visual(const Person* root, int level)
     }
 }
 
+void free_family_tree(Person* people[], int count)
+{
+    for (int i=0;i<count;i++)
+    {
+        free(people[i]);
+    }
+}
+
 int main(void)
 {
     Person* members[7];
@@ -146,5 +154,7 @@ int main(void)
 
     printf("=== OPTIONAL BONUS TASK ===\n");
     point_tree_visual(members[0], 0);
+
+    free_family_tree(members,7);
     return 0;
 }
