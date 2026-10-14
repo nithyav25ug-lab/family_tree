@@ -3,3 +3,6 @@ Milestone 1:
 
 Milestone 2: 
 <img width="378" height="331" alt="Milestone 2" src="https://github.com/user-attachments/assets/bd097047-3198-45ee-b8ab-6c886a05c89d" />
+
+Milestone 3:
+<img width="394" height="554" alt="Milestone 3" src="https://github.com/user-attachments/assets/80247d8b-49a6-4fa2-829c-025046ffc8e1" />
