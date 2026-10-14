@@ -74,12 +74,56 @@ void print_family_relationships(const Person *me)
     }
 }
 
+void point_tree_visual(const Person* root, int level)
+{
+    if (root == NULL) 
+    {
+        return;
+    }
+    if (level == 0) 
+    {
+        printf("%s (Age: %d)\n", root->name, root->age);
+        if (root->mother != NULL) 
+        {
+            printf("  |-- Mother: %s (Age: %d)\n", root->mother->name, root->mother->age);
+            point_tree_visual(root->mother, 1);
+        }
+        if (root->father != NULL) 
+        {
+            printf("  |-- Father: %s (Age: %d)\n", root->father->name, root->father->age);
+            point_tree_visual(root->father, 2);
+        }
+    }
+    else if (level == 1) 
+    {
+        if (root->mother != NULL) 
+        {
+            printf("  |   |-- Grandmother: %s (Age: %d)\n", root->mother->name, root->mother->age);
+        }
+        if (root->father != NULL) 
+        {
+            printf("  |   |-- Grandfather: %s (Age: %d)\n", root->father->name, root->father->age);
+        }
+    }
+    else if (level == 2) 
+    {
+        if (root->mother != NULL) 
+        {
+            printf("      |-- Grandmother: %s (Age: %d)\n", root->mother->name, root->mother->age);
+        }
+        if (root->father != NULL) 
+        {
+            printf("      |-- Grandfather: %s (Age: %d)\n", root->father->name, root->father->age);
+        }
+    }
+}
+
 int main(void)
 {
     Person* members[7];
     char name[100];
     int age;
-    char role[7][25] = {"Yourself", 
+    static char role[7][25] = {"Yourself", 
         "Mother", "Father", 
         "Maternal Grandmother", "Maternal Grandfather", 
         "Paternal Grandmother", "Paternal Grandfather"};
@@ -99,5 +143,8 @@ int main(void)
     link_parents(members[2],members[6],members[5]);
 
     print_family_relationships(members[0]);
+
+    printf("=== OPTIONAL BONUS TASK ===\n");
+    point_tree_visual(members[0], 0);
     return 0;
 }
